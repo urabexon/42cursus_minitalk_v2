@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:36:20 by hurabe            #+#    #+#             */
-/*   Updated: 2024/08/31 20:35:56 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/08/31 20:40:41 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	signal_handler(int sig, siginfo_t *info, void *context)
 			if (sig == SIGUSR1)
 				kill(c_pid, SIGUSR1);
 			else
-				kill(c_pid, SIGURG);
+				kill(c_pid, SIGUSR2);
 			c_pid = 0;
 			write(1, "\n", 1);
 			return ;
