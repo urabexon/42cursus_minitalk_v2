@@ -6,7 +6,7 @@
 #    By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/19 16:36:16 by hurabe            #+#    #+#              #
-#    Updated: 2024/08/24 20:49:53 by hurabe           ###   ########.fr        #
+#    Updated: 2024/09/01 15:18:00 by hurabe           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ C_SRCS = client.c
 S_SRCS = server.c
 
 cc = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 
 INCLUDES = -I./include -I./libft -I./ft_printf
 LIBFT_DIR = libft

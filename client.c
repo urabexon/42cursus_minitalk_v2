@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:36:12 by hurabe            #+#    #+#             */
-/*   Updated: 2024/08/31 23:19:43 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/01 16:09:07 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static void	send_signal(int s_pid, char *s)
 			{
 				if (kill(s_pid, SIGUSR2) == -1)
 					ft_error(KILL_ERROR);
-			}
+				}
 			else
 			{
 				if (kill(s_pid, SIGUSR1) == -1)
@@ -78,7 +78,7 @@ static void	send_signal(int s_pid, char *s)
 			//}
 			//while (kill(s_pid, sig) == -1)
 			g_acknowledgement = false;
-			usleep(2000);
+			usleep(3500);
 		}
 		//if (*s == '\0')
 	}

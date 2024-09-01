@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:36:20 by hurabe            #+#    #+#             */
-/*   Updated: 2024/08/31 22:13:33 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/01 16:04:41 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static void	signal_handler(int sig, siginfo_t *info, void *context)
 	static unsigned char	c = 0;
 
 	(void)context;
+	//(void)info;
 	if (!client_pid)
 		client_pid = info->si_pid;
 	c |= (sig == SIGUSR2);
@@ -33,7 +34,7 @@ static void	signal_handler(int sig, siginfo_t *info, void *context)
 		}
 		ft_putchar_fd(c, 1);
 		c = 0;
-		kill(client_pid, SIGUSR1);
+		////kill(client_pid, SIGUSR1);
 	}
 	else
 		c <<= 1;
